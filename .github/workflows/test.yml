@@ -1,0 +1,34 @@
+name: Test
+
+on:
+  pull_request:
+    branches:
+      - '**'
+      - '!main'
+  push:
+    branches:
+      - '**'
+      - '!main'
+
+jobs:
+  test:
+    env:
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - run: npm ci
+      - name: Lint Code Base
+        uses: github/super-linter@v5.0.0
+        env:
+          LINTER_RULES_PATH: /
+          FILTER_REGEX_EXCLUDE: (.*dist\/.*)|(.husky\/.*)|(.test\/.*)
+          JAVASCRIPT_ES_CONFIG_FILE: .eslintrc.json
+          VALIDATE_ALL_CODEBASE: true
+          VALIDATE_JAVASCRIPT_STANDARD: false
+          DEFAULT_BRANCH: main
+          IGNORE_GENERATED_FILES: true
+      - run: npm test

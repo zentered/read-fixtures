@@ -1,0 +1,16 @@
+{
+  "name": "@zentered/read-fixtures",
+  "version": "1.0.0",
+  "description": "Helper function to read json fixtures from a directory",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "node --test"
+  },
+  "keywords": [
+    "node:test",
+    "helper"
+  ],
+  "author": "Zentered <hi@zentered.co> (https://zentered.co)",
+  "license": "MIT"
+}
