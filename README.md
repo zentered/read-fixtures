@@ -1,5 +1,8 @@
 # read-fixtures
 
+> [!WARNING]
+> This package is deprecated and no longer maintained. Read fixtures with `JSON.parse(await readFile(new URL('./fixtures/name.json', import.meta.url)))` from `node:fs/promises` instead.
+
 Tiny helper function to read JSON fixtures for tests
 
 ```bash
