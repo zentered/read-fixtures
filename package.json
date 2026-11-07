@@ -8,8 +8,25 @@
   ],
   "license": "MIT",
   "author": "Zentered <hi@zentered.co> (https://zentered.co)",
+  "homepage": "https://github.com/zentered/read-fixtures#readme",
+  "bugs": {
+    "url": "https://github.com/zentered/read-fixtures/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zentered/read-fixtures.git"
+  },
   "type": "module",
   "main": "index.js",
+  "exports": {
+    ".": "./index.js"
+  },
+  "files": [
+    "index.js"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
   "scripts": {
     "test": "node --test"
   },
