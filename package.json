@@ -1,7 +1,7 @@
 {
   "name": "@zentered/read-fixtures",
   "version": "1.0.0",
-  "description": "Helper function to read json fixtures from a directory",
+  "description": "Deprecated: Helper function to read json fixtures from a directory",
   "keywords": [
     "node:test",
     "helper"
